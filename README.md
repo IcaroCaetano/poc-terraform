@@ -5,6 +5,8 @@
 Terraform is an Infrastructure as Code (IaC) tool developed by HashiCorp that allows you to create, manage, and version infrastructure declaratively.
 With Terraform, you describe what you want (resources, networks, permissions) in .tf configuration files, and Terraform takes care of creating, updating, or deleting these resources in the cloud securely and predictably.
 
+![Logo do Terraform](https://www.terraform.io/assets/images/og-image-1920.png)
+
 ## 💡 Key Concepts
 
 ### Providers
