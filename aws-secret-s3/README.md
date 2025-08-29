@@ -11,6 +11,34 @@ localstack-poc/
  └── outputs.tf     # Outputs: bucket name and secret ARN
 ```
 
+## 📊 Diagrama de Recursos – POC LocalStack
+
+```
++----------------------+               +--------------------------+
+|      Terraform       |               |       LocalStack         |
+|  (your configuration)|               |  (simulated AWS cloud)  |
++----------------------+               +--------------------------+
+           |                                     |
+           | terraform apply / tflocal apply    |
+           v                                     v
++----------------------+               +--------------------------+
+|  Provider AWS         | ------------> |  Endpoints LocalStack    |
+| (configured for LS)  |               |  S3 -> http://localhost:4566
+|                      |               |  SecretsManager -> http://localhost:4566
++----------------------+               +--------------------------+
+           |                                     |
+           |                                     |
+           v                                     v
++----------------------+               +--------------------------+
+|   Resources:         |               |  LocalStack Services     |
+| - S3 Bucket          | ------------> |  S3 Bucket:              |
+|   poc-localstack-bucket |            |  poc-localstack-bucket   |
+| - SecretsManager      | ------------> |  Secret: poc-secret      |
+|   poc_secret          |               |  SecretValue:            |
+| - Secret Version      |               |  { username, password }  |
++----------------------+               +--------------------------+
+```
+
 ### 1️⃣ main.tf
 
 ```
