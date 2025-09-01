@@ -1,0 +1,12 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.backup
+*.zip
+
+# IDE
+*.idea/
+.vscode/
+aws-experian-lambda/package/
+
+.terraform.lock.hcl

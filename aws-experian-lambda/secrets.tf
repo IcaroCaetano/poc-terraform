@@ -1,13 +1,14 @@
 provider "aws" {
-  region                      = "us-east-1"
-  access_key                  = "test"
-  secret_key                  = "test"
-  s3_force_path_style         = true
+  region     = "us-east-1"
+  access_key = "test"
+  secret_key = "test"
+
   endpoints {
-    secretsmanager = "http://localhost:4566"
-    lambda         = "http://localhost:4566"
-    iam            = "http://localhost:4566"
-    logs           = "http://localhost:4566"
+    s3              = "http://localhost:4566"
+    secretsmanager  = "http://localhost:4566"
+    lambda          = "http://localhost:4566"
+    iam             = "http://localhost:4566"
+    cloudwatch      = "http://localhost:4566"
   }
 }
 
