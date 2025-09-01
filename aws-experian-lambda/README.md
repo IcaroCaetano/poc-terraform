@@ -5,6 +5,7 @@
 This Proof of Concept (POC) demonstrates the setup and configuration of an AWS Lambda project integrated with Experian services.
 The goal of this POC was to prepare the project structure, configure Git versioning rules, and exclude unnecessary files from version control, ensuring a clean and optimized repository.
 
+
 ### 🔹 Business Context:
 
 - Experian requires passwords to be changed regularly and securely. To ensure the continuity of the integration in production, it was necessary to prepare and automate the password reset process, maintaining logs and security.
