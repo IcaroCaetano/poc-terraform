@@ -27,21 +27,34 @@ Before running this POC, make sure you have the following installed:
 
 1. Start LocalStack
 
-'''bash
+```bash
 
 localstack start -d
-'''
+```
 
 2. Verify services are running
 
-'''bash
+```bash
 
 localstack status services
-'''
-
+```
 3. Initialize Terraform
 
-'''bash
+```bash
 
 tflocal init
-'''
+```
+
+4. Preview the execution plan
+
+```bash
+
+tflocal plan
+```
+
+5. Apply the resources
+
+```bash
+
+tflocal apply -auto-approve
+```
