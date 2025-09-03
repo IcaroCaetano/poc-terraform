@@ -26,3 +26,22 @@ Before running this POC, make sure you have the following installed:
 ## 🚀 Steps to Run
 
 1. Start LocalStack
+
+'''bash
+
+localstack start -d
+'''
+
+2. Verify services are running
+
+'''bash
+
+localstack status services
+'''
+
+3. Initialize Terraform
+
+'''bash
+
+tflocal init
+'''
