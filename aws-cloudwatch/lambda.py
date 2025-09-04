@@ -5,8 +5,8 @@ logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 
 def handler(event, context):
-    logger.info("🚀 Lambda POC executada com sucesso!")
-    logger.debug("🔍 Evento recebido: %s", json.dumps(event))
+    logger.info("🚀 Lambda POC executed successfully!")
+    logger.debug("🔍 Event received: %s", json.dumps(event))
 
     # Retorno simples
     return {
