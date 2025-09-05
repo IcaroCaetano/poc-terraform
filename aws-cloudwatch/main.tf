@@ -1,3 +1,5 @@
+# This block defines settings and configurations that apply to Terraform itself.
+# It usually specifies provider requirements, backend configurations, and version constraints.
 terraform {
   required_providers {
     aws = {
