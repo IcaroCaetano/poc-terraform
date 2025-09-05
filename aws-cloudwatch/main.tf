@@ -9,6 +9,8 @@ terraform {
   }
 }
 
+# Connects Terraform to LocalStack instead of real AWS.
+# Defines the configuration for the AWS provider.
 provider "aws" {
   region                      = "us-east-1"
   access_key                  = "test"
