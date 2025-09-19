@@ -89,3 +89,23 @@ Connect via SSH:
 ```
 ssh -i your-keypair.pem ubuntu@<EC2_PUBLIC_IP>
 ```
+
+## 📤 Outputs
+
+After applying, Terraform provides:
+
+- ec2_public_ip → Public IP address of the EC2 instance
+
+- ec2_public_dns → Public DNS address of the EC2 instance
+
+Example:
+
+```
+
+Outputs:
+
+ec2_public_ip  = "54.210.123.45"
+ec2_public_dns = "ec2-54-210-123-45.compute-1.amazonaws.com"
+```
+
+
