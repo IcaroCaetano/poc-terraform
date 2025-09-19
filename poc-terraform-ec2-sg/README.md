@@ -24,3 +24,38 @@ terraform-ec2-sg-poc/
 - AWS account with access keys configured (aws configure)
 
 - A valid EC2 Key Pair already created in AWS for SSH access
+
+##   🚀 How It Works
+
+### 1- Provider Configuration
+
+- Connects Terraform to AWS using the aws provider.
+
+### 2 - Security Group
+
+- Allows inbound traffic on port 22 (SSH) from anywhere.
+
+- Allows inbound traffic on port 80 (HTTP) from anywhere.
+
+- Allows all outbound traffic.
+
+### 3 - EC2 Instance
+
+- Creates an Ubuntu-based EC2 instance (t2.micro by default).
+
+- Attaches the Security Group created earlier.
+
+- Associates a key pair for SSH login.
+
+### 4 - Outputs
+
+- Displays the Public IP and Public DNS of the created instance.
+
+## 🛠 Usage
+
+### 1. Initialize Terraform
+
+´´´
+
+terraform init
+´´´
