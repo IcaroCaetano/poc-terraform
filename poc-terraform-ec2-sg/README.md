@@ -108,4 +108,12 @@ ec2_public_ip  = "54.210.123.45"
 ec2_public_dns = "ec2-54-210-123-45.compute-1.amazonaws.com"
 ```
 
+### 📌 Notes
+
+- For security reasons, it is recommended to restrict SSH access to your own IP instead of 0.0.0.0/0.
+
+- You can deploy a simple web server (e.g., nginx or Apache) to test HTTP access.
+
+- This POC uses a public Ubuntu AMI (ami-0c55b159cbfafe1f0), which may change over time. Update it if needed.
+
 
