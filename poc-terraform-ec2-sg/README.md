@@ -8,14 +8,14 @@ The Security Group allows SSH (port 22) and HTTP (port 80) access, making it pos
 
 ## 📂 Project Structure
 
-´´´
+```
 
 terraform-ec2-sg-poc/
 │── main.tf        # Defines provider, Security Group, and EC2 instance
 │── variables.tf   # Input variables (instance type, key pair)
 │── outputs.tf     # Outputs (public IP and DNS of the EC2 instance)
 
-´´´
+```
 
 ## ⚙️ Prerequisites
 
@@ -55,7 +55,37 @@ terraform-ec2-sg-poc/
 
 ### 1. Initialize Terraform
 
-´´´
+```
 
 terraform init
-´´´
+```
+
+### 2. Validate the configuration
+
+```
+
+terraform validate
+```
+
+### 3. Plan the infrastructure
+
+```
+
+terraform plan -var="key_pair_name=your-keypair-name"
+```
+
+### 4. Apply the configuration
+
+```
+
+terraform apply -var="key_pair_name=your-keypair-name" -auto-approve
+```
+
+### 5. Access the EC2 Instance
+
+After deployment, Terraform will output the Public IP.
+Connect via SSH:
+
+```
+ssh -i your-keypair.pem ubuntu@<EC2_PUBLIC_IP>
+```
